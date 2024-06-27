@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+    {% load crispy_forms_tags %}
+
+    <!-- Documents -->
+    <section id="projects" class="section projects">
+      <h2 class="section__title">Documents</h2>
+
+      <div class="projects__grid">
+        {% for document in documents %}
+        <div class="project">
+          <h3>{{ document.name }}</h3>
+          <a href="{% url 'display_pdf' document.pk %}" class="project__stack-item" style="text-decoration: none">Read More &rarr;</a>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+{% endblock content %}

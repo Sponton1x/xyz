@@ -1,0 +1,49 @@
+{% extends './base.html' %} {% block content %}
+    {% load crispy_forms_tags %}
+      <!-- About -->
+      <div class="about center">
+        <h1 class="about__name">Sponton.</h1>
+        <h2 class="about__role">I am a <span id="typing-text"></span></h2>
+        <p class="about__desc">
+          I am a constant explorer, driven by curiosity. I immerse myself in diverse interests, always in search of knowledge.
+          Learning fuels my journey, and with each step, I strive for excellence.
+          Through practice, I hone my skills, and as I master them, I am compelled to pass on what I've gained.
+          Teaching becomes the natural outcome of my endeavors, as I share the wealth of wisdom I've acquired.
+          In essence, my activity encapsulates a cycle of exploration, learning, mastery, and the joy of imparting knowledge.
+
+          <br>
+          <br>
+          <p><q>No results? Keep working <br> Bad results? Keep working<br> Great results? Keep the f*ck working <br> Consintecy is a key.</q></p>
+        </p>
+
+        <div class="about__contact center">
+          <a href="https://github.com/Sponton1x" aria-label="github" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+
+
+      <!-- Skills -->
+      <section class="section skills" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <ul class="skills__list">
+          <li class="skills__list-item btn btn--plain">Python</li>
+          <li class="skills__list-item btn btn--plain">Linux</li>
+          <li class="skills__list-item btn btn--plain">PostgreSQL</li>
+          <li class="skills__list-item btn btn--plain">Networking</li>
+          <li class="skills__list-item btn btn--plain">Git</li>
+          <li class="skills__list-item btn btn--plain">Arduino</li>
+          <li class="skills__list-item btn btn--plain">Docker</li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact center" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <a href="mailto:Sponton1x@proton.me">
+          <span class="btn btn--outline">Email me</span>
+        </a>
+      </section>
+{% endblock content %}

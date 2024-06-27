@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+    {% load crispy_forms_tags %}
+    <!-- Certificates -->
+    <section id="projects" class="section projects">
+      <h2 class="section__title">Certificates</h2>
+
+      <div class="projects__grid">
+        {% for certificate in certificates_list %}
+        <div class="project">
+          <h3>{{ certificate.name }}</h3>
+          <p class="project__description">{{ certificate.organisation }}</p>
+          <img src="{{ certificate.photo.url }}" alt="{{ certificate.name }}" class="project__image">
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+{% endblock content %}

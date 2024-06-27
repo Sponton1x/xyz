@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block content %}
+    {% load crispy_forms_tags %}
+
+
+      <!-- Projects -->
+      <section id="projects" class="section projects">
+        <h2 class="section__title">Projects</h2>
+
+        <div class="projects__grid">
+          {% for project in project_list %}
+          <div class="project">
+            <h3>{{ project.title }}</h3>
+            <p class="project__description">{{ project.content|safe|slice:":200" }}</p>
+            <a href="{% url 'projects_detail' project.slug %}" class="project__stack-item" style="text-decoration: none">Read More &rarr;</a>
+
+            <ul class="project__stack">
+                {% for technology in project.technology.all %}
+                <li class="project__stack-item">{{ technology.name }}</li>
+                {% endfor %}
+            </ul>
+
+            {% if project.show_link %}
+            <a href="{{ project.link }}" aria-label="source code" class="link link--icon">
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+{% endblock content %}

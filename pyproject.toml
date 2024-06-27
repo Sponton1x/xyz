@@ -1,0 +1,18 @@
+[build-system]
+build-backend = "poetry.masonry.api"
+requires = ["poetry>=0.12"]
+
+[tool]
+[tool.poetry]
+authors = ["Your Name <you@example.com>"]
+description = ""
+name = "django-template"
+version = "0.1.0"
+[tool.poetry.dependencies]
+Django = "4.2"
+python = "^3.8"
+django-axes = "^6.1.0"
+django-crispy-forms = "1.9.2"
+django-jazzmin = "^3.0.0"
+pillow = "^10.3.0"
+[tool.poetry.dev-dependencies]

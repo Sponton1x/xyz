@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+    {% load crispy_forms_tags %}
+      <!-- About -->
+      <section id="projects" class="section projects">
+        <h2 class="section__title">About Me</h2>
+
+        <div class="projects__grid">
+          {% for about in about_list %}
+          <div class="project">
+            <h3>{{ about.title }}</h3>
+            <p class="project__description">{{ about.content | safe }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact center" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <a href="mailto:rjshekhar.official@gmail.com">
+          <span class="btn btn--outline">Email me</span>
+        </a>
+      </section>
+{% endblock content %}
+

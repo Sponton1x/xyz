@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lockout</title>
+    {% load static %}
+    <link rel='icon' href="{% static 'image.ico' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #313473;
+        }
+
+        .lockout-container {
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 150px;
+            padding: 20px;
+            background-color: #313473;
+        }
+
+        .lockout-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #e60800;
+        }
+
+        .lockout-message {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #bdbddd;
+        }
+
+        .lockout-reset-time {
+            text-align: center;
+            font-size: 16px;
+            color: #bdbddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="lockout-container">
+        <h2>Lockout</h2>
+        <div class="lockout-message">
+            Too many unsuccessful login attempts!
+        </div>
+        <div class="lockout-reset-time">
+            Your account will be unlocked after 10 minutes. <br/>
+            If you aren't admin, don't log in!
+        </div>
+    </div>
+</body>
+</html>
