@@ -29,7 +29,7 @@ source $(poetry env info --path)/bin/activate
 
 # Run Django migrations
 echo "Running Django database migrations..."
-poetry add gunicorn
+poetry add gunicorn whitenoise
 poetry run python manage.py migrate
 poetry run python manage.py collectstatic --no-input
 
