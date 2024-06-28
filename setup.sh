@@ -25,8 +25,11 @@ poetry install
 echo "Activating virtual environment..."
 source $(poetry env info --path)/bin/activate
 
+
+
 # Run Django migrations
 echo "Running Django database migrations..."
+poetry add gunicorn
 poetry run python manage.py migrate
 
 echo "Setup completed successfully!"
