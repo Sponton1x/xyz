@@ -31,5 +31,6 @@ source $(poetry env info --path)/bin/activate
 echo "Running Django database migrations..."
 poetry add gunicorn
 poetry run python manage.py migrate
+poetry run python manage.py collectstatic --no-input
 
 echo "Setup completed successfully!"
